@@ -15,7 +15,7 @@ LBP_3D_diagonal.m: Function file, LBPd operator, the details of the operator are
 LBPa.m: The main program of the LBPa, the details of the model are detailed in the paper.    
 LBPd.m: The main program of the LBPd, the details of the model are detailed in the paper.   
 MLBP.m: The main program of the MLBP, the details of the model are detailed in the paper.   
-computeDSC: Function file, calculate prediction accuracy (DICE).
+computeDSC: Function file, calculate prediction accuracy (DICE).   
 SLIC_3D.m: Function file, SLIC algorithm in 3D case.   
 load_nii.m， load_nii_hdr.m， load_nii_img.m，xform_nii.m：  
 Function file for reading MRI data (.nii files) from Matlab Tool Library "NIfTI_20140122".  
