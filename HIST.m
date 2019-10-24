@@ -1,5 +1,5 @@
 
-%% May.10.2019
+%% Sept.2.2019
 % SF Liu
 % Organizational segmentation by extracting grayscale features of the MRS dataset
 % It will compute the Dice.
@@ -55,8 +55,11 @@ parfor dataset=1:15
 end
 
 %% praper test set
-name='3';
+name='2';
 src=load_nii(['F:\python\Levelset\LevelSet2.0\brain data\test\',name,'_brain.nii']);
+w=2.5;
+train_xw=train_x;
+train_xw(:,1:3)=train_x(:,1:3)*w;
 vol=src.img;
 [SLIC_label_test,sv_centers]=SLIC_3D(vol,SLIC_num,0,1,2);
 vol_int=round(vol/max(max(max(vol)))*255);
@@ -74,10 +77,10 @@ for p=1:height
         end
     end
 end
-test_x=[sv_centers,hist];
+test_x=[sv_centers*w,hist];
 
 % knn
-c = fitcknn(train_x,train_y,'NumNeighbors',5);
+c = fitcknn(train_xw,train_y,'NumNeighbors',5);
 test_y = predict(c,test_x);
 
 %

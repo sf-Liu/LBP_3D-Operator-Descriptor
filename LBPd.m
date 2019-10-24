@@ -55,8 +55,11 @@ parfor dataset=1:15
 end
 
 %% praper test set
-name='3';
+name='2';
 src=load_nii(['brain data\test\',name,'_brain.nii']);
+w=2.5;
+train_xw=train_x;
+train_xw(:,1:3)=train_x(:,1:3)*w;
 vol=src.img;
 [SLIC_label_test,sv_centers]=SLIC_3D(vol,SLIC_num,0,1,2);
 vol_lbp=LBP_3D_diagonal(vol,0);
@@ -75,10 +78,10 @@ for p=1:height
         end
     end
 end
-test_x=[sv_centers,lbp_hist];
+test_x=[sv_centers*w,lbp_hist];
 
 % knn
-c = fitcknn(train_x,train_y,'NumNeighbors',5);
+c = fitcknn(train_xw,train_y,'NumNeighbors',5);
 
 % verification
 test_y = predict(c,test_x);
