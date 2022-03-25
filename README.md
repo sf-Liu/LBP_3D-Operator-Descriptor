@@ -1,5 +1,5 @@
 # LBP_3D-Operator-Descriptor  
-This is the code associated with the paper SUPERVOXEL CLUSTERING WITH A NOVEL 3D DESCRIPTOR FOR BRAIN TISSUE SEGMENTATION, which is currently being sent to CBD 2019
+This is the code associated with the paper Supervoxel Clustering with a Novel 3D Descriptor for Brain Tissue Segmentation
 
 1. OS：Win 10      Operating platform：Matlab R2017a  
     
