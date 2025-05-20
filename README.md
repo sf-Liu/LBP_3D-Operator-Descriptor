@@ -23,4 +23,9 @@ Function file for reading MRI data (.nii files) from Matlab Tool Library "NIfTI_
    
 ## Instructions for excution:
 Open the main program of the corresponding model through Matlab, you can run and get the result under the model.  
-It should be noted that the Matlab used needs to support the "parpool" function, and the version should not be too low.  
+Please note that MATLAB should be in a version which supports the "parpool" function.  
+
+---------------------
+For help or issues using the codes, please submit a GitHub issue.
+
+For other communications related to our work, please contact Yongfan Liu (`yongfal@uci.edu`) 
